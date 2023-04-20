@@ -34,7 +34,7 @@ const Navbar = () => {
            {/* Header */}
             <div className='flex w-1/2 h-full'>
                 <h1 className='text-white text-3xl md:text-4xl lg:text-5xl text-bold my-8 mx-8 lg:mx-20'>
-                  <a>
+                  <a href='/'>
                       Marvel for Beginners
                   </a>
                 </h1>
@@ -47,7 +47,7 @@ const Navbar = () => {
              key={id}
              className="text-2xl px-4 cursor-pointer font-medium text-white hover:scale-110 duration-200 ">
               <a href={path}>{child}</a>
-           <div></div>
+           
            </li>
         ))}
       </ul>
