@@ -47,7 +47,7 @@ const Navbar = () => {
              key={id}
              className="text-2xl px-4 cursor-pointer font-medium text-white hover:scale-110 duration-200 ">
               <a href={path}>{child}</a>
-           
+           <div></div>
            </li>
         ))}
       </ul>
