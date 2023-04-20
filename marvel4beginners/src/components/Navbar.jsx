@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {Link} from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 
@@ -61,11 +60,11 @@ const Navbar = () => {
        {/* Mobil Navbar Logic */}
        {nav && (
       <ul className="flex flex-col md:hidden justify-end items-center absolute top-32 right-0 w-1/4 h-50vh bg-gradient-to-b from-black via-red-800 to-gray-500 text-white">
-      {links.map(({ id, child }) => (
+      {links.map(({ id, child, path }) => (
              <li 
              key={id}
              className="px-4 cursor-pointer py-6 text-xl">
-           {child}
+          <a href={path}>{child}</a>
            </li>
            
            
