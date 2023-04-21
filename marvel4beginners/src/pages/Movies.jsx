@@ -15,7 +15,8 @@ import ShangChi from "../assets/movies/Shang-Chi.jpg";
 import nowayHome from "../assets/movies/spider-man-no-way-home.jpg";
 import homecoming from "../assets/movies/spiderman-homecoming.jpg";
 import wintersoldier from "../assets/movies/wintersoldier.jpg";
-import ragnarok from "../assets/movies/Thor-ragnarok.jpg";
+import ragnarok from "../assets/movies/Thor-Ragnarok.jpg";
+import rottenLogo from "../assets/movies/rotten-tomatoes-icon-18.png"
 // var imdbTrailerApi = "https://imdb-api.com/en/API/Trailer/";
 // // var imdbKey = "k_zcmn64r8/";
 // var imdbKey = "k_dxu9eccb/";
@@ -109,7 +110,7 @@ const Movies = () => {
       src: civilwar,
       alt: "Captain America Civil War Movie Poster",
       style: 'shadow-blue-800',
-      title: "Captain America: Civil Ware",
+      title: "Captain America: Civil War",
       rT: "90%",
     },
     {
@@ -117,7 +118,7 @@ const Movies = () => {
       src: wintersoldier,
       alt: "Captain America: The Winter Soldier Movie Poster",
       style: 'shadow-blue-800',
-      title: "Captain America: The Winter Soldier Movie",
+      title: "Captain America: The Winter Soldier",
       rT: "90%",
     },
     {
@@ -201,7 +202,7 @@ const Movies = () => {
 //     movieDiv.append(description);
 
   return (
-    <>
+    
     
     <div className='flex w-[100vw] h-[160vh]'>
       <div className='flex justify-center items-center w-full h-20 mt-28'>
@@ -211,19 +212,19 @@ const Movies = () => {
     <div className='grid'>
         {
           movies.map(({id, src, alt, style, title, rT}) => (
-            <div name="movieCard" className='flex flex-col w-full h-full'>
-               <div className='h-5/6'>
-                <img src={src} alt={alt} />
+            <div key={id} name="movieCard" className='flex flex-col w-3/4 h-80'>
+               <div className="h-3/4 mb-2 overflow-auto">
+                <img src={src} alt={alt} height="3/4" />
               </div>
 
                 
-              <div>
-              <div className='flex flex-row h-1/6'>
+              <div className='flex flex-row justify-between h-1/5'>
+              <div className='w-3/4'>
                 <h2>{title}</h2>
                 </div>
               
-                <div>
-                  <img src="" alt="" />
+                <div className='flex w-1/4 justify-end'>
+                  <img src={rottenLogo} alt="Rotten Tomato" className='w-1/3 h-1/3'/>
                   <p>{rT}</p>
                 </div>
                 </div>
@@ -240,7 +241,7 @@ const Movies = () => {
 
 
     </div>
-    </>
+    
   );
   }
 
