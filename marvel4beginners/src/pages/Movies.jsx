@@ -210,7 +210,28 @@ const Movies = () => {
 
     <div className='grid'>
         {
-          movies.map(({}))
+          movies.map(({id, src, alt, style, title, rT}) => (
+            <div name="movieCard" className='flex flex-col w-full h-full'>
+               <div className='h-5/6'>
+                <img src={src} alt={alt} />
+              </div>
+
+                
+              <div>
+              <div className='flex flex-row h-1/6'>
+                <h2>{title}</h2>
+                </div>
+              
+                <div>
+                  <img src="" alt="" />
+                  <p>{rT}</p>
+                </div>
+                </div>
+                
+
+            </div>
+
+          ))
         }
 
       </div>
