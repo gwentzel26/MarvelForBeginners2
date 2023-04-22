@@ -2,3 +2,8 @@
     background: url(../assets/MarvelHomePage.jpg);
     background-size: cover;
 }
+
+.theaterImage {
+    background: url(../assets/theaterBackground.jpg);
+    background-size: cover;
+}

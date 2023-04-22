@@ -204,39 +204,42 @@ const Movies = () => {
   return (
     
     
-    <div className='flex w-[100vw] h-[160vh]'>
-      <div className='flex justify-center items-center w-full h-20 mt-28'>
-          <h1> Most Popular Marvel Movies</h1>
-      </div>
+    <div name="movies" className='w-fit h-fit flex-col justify-center items-center pt-36 bg-gradient-to-r from-blue-500 to-white theaterImage'>
+          <div className='flex justify-center items-center w-full h-20 mb-4'>
+              <h1 className='text-3xl lg:text-6xl text-black'> Most Popular Marvel Movies</h1>
+          </div>
+   
 
-    <div className='grid'>
-        {
-          movies.map(({id, src, alt, style, title, rT}) => (
-            <div key={id} name="movieCard" className='flex flex-col w-3/4 h-80'>
-               <div className="h-3/4 mb-2 overflow-auto">
-                <img src={src} alt={alt} height="3/4" />
-              </div>
+       
+          <div className='w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
+                      {
+                        movies.map(({id, src, alt, style, title, rT}) => (
+                          <div key={id} name="movieCard" className='mx-auto flex flex-col w-2/3 h-full'>
+                            <div className="h-3/4 mb-2 shadow-white hover:shadow-lg">
+                              <img src={src} alt={alt} className="h-full w-full border-8 border-double border-red-800 hover:scale-105 duration-300 " />
+                            </div>
 
-                
-              <div className='flex flex-row justify-between h-1/5'>
-              <div className='w-3/4'>
-                <h2>{title}</h2>
-                </div>
-              
-                <div className='flex w-1/4 justify-end'>
-                  <img src={rottenLogo} alt="Rotten Tomato" className='w-1/3 h-1/3'/>
-                  <p>{rT}</p>
-                </div>
-                </div>
-                
+                              
+                            <div className='flex flex-row justify-between h-1/5'>
+                            <div className='w-3/4'>
+                              <h2 className='text-white text-xl'>{title}</h2>
+                              </div>
+                            
+                              <div className='flex w-1/4 justify-end'>
+                                <img src={rottenLogo} alt="Rotten Tomato" className='w-1/3 h-1/4'/>
+                                <p className='text-white px-2 text-xl'>{rT}</p>
+                              </div>
+                            </div>
+                              
 
-            </div>
+                          </div>
+                        
 
-          ))
-        }
+                        ))
+                      }
 
-      </div>
-
+          </div>
+  
 
 
 

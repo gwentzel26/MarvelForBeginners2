@@ -4,11 +4,11 @@ const SearchContainer = () => {
   return (
     
     <div className="flex flex-col justify-center items-center w-4/5 h-32 text-white z-10 ">
-        <div className='flex flex-col '>
+        <div className='w-full flex flex-col justify-center items-center '>
 
         
-           <div className='flex flex-row justify-between'>
-            <input type="text" placeholder="Captain America" className="w-5/8" />
+           <div className='w-1/3 flex flex-row justify-between'>
+            <input type="text" placeholder="Captain America" className="w-5/8 lg:w-full px-2 text-gray-500" />
             <button id="searchBtn" className='px-2 mx-2 bg-gradient-to-r from-red-800 to-red-500 border-4 border-double border-black w-3/8'>Search</button>
             </div>
             <h3 id="searchh3" className="hidden">
